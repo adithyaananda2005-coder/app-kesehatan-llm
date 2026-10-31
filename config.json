@@ -1,0 +1,126 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "temperature": 0,
+  "max_tokens": 300,
+  "reasoning_effort": "low",
+  "labels": [
+    "Jinak",
+    "Ganas"
+  ],
+  "system_prompt": "Kamu adalah sistem klasifikasi diagnosis massa jaringan payudara.\nData berupa ukuran inti sel hasil pemeriksaan: radius, tekstur, keliling, luas, kehalusan, kekompakan, cekungan, dan jumlah titik cekung kontur.\nLabel:\n- Jinak: massa tidak bersifat kanker\n- Ganas: massa bersifat kanker\nJawab HANYA dengan satu kata: Jinak atau Ganas.",
+  "few_shot": [
+    {
+      "data": {
+        "radius": 17.85,
+        "tekstur": 13.23,
+        "keliling": 114.6,
+        "luas": 992.1,
+        "kehalusan": 0.07838,
+        "kekompakan": 0.06217,
+        "cekungan": 0.04445,
+        "titik_cekung": 0.04178
+      },
+      "label": "Jinak"
+    },
+    {
+      "data": {
+        "radius": 14.68,
+        "tekstur": 20.13,
+        "keliling": 94.74,
+        "luas": 684.5,
+        "kehalusan": 0.09867,
+        "kekompakan": 0.072,
+        "cekungan": 0.07395,
+        "titik_cekung": 0.05259
+      },
+      "label": "Ganas"
+    },
+    {
+      "data": {
+        "radius": 17.2,
+        "tekstur": 24.52,
+        "keliling": 114.2,
+        "luas": 929.4,
+        "kehalusan": 0.1071,
+        "kekompakan": 0.183,
+        "cekungan": 0.1692,
+        "titik_cekung": 0.07944
+      },
+      "label": "Ganas"
+    },
+    {
+      "data": {
+        "radius": 12.46,
+        "tekstur": 19.89,
+        "keliling": 80.43,
+        "luas": 471.3,
+        "kehalusan": 0.08451,
+        "kekompakan": 0.1014,
+        "cekungan": 0.0683,
+        "titik_cekung": 0.03099
+      },
+      "label": "Jinak"
+    },
+    {
+      "data": {
+        "radius": 14.99,
+        "tekstur": 25.2,
+        "keliling": 95.54,
+        "luas": 698.8,
+        "kehalusan": 0.09387,
+        "kekompakan": 0.05131,
+        "cekungan": 0.02398,
+        "titik_cekung": 0.02899
+      },
+      "label": "Ganas"
+    },
+    {
+      "data": {
+        "radius": 14.62,
+        "tekstur": 24.02,
+        "keliling": 94.57,
+        "luas": 662.7,
+        "kehalusan": 0.08974,
+        "kekompakan": 0.08606,
+        "cekungan": 0.03102,
+        "titik_cekung": 0.02957
+      },
+      "label": "Jinak"
+    },
+    {
+      "data": {
+        "radius": 17.05,
+        "tekstur": 19.08,
+        "keliling": 113.4,
+        "luas": 895.0,
+        "kehalusan": 0.1141,
+        "kekompakan": 0.1572,
+        "cekungan": 0.191,
+        "titik_cekung": 0.109
+      },
+      "label": "Ganas"
+    },
+    {
+      "data": {
+        "radius": 12.7,
+        "tekstur": 12.17,
+        "keliling": 80.88,
+        "luas": 495.0,
+        "kehalusan": 0.08785,
+        "kekompakan": 0.05794,
+        "cekungan": 0.0236,
+        "titik_cekung": 0.02402
+      },
+      "label": "Jinak"
+    }
+  ],
+  "evaluasi": {
+    "accuracy": 0.86,
+    "f1_macro": 0.8542,
+    "invalid": 0,
+    "n": 100,
+    "f1_library_pembanding": 0.9151,
+    "dataset": "dataset_kesehatan.csv (bagian test)",
+    "tanggal": "2026-10-31"
+  }
+}
